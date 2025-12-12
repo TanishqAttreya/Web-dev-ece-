@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name — Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="logo">YourName</div>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <h1>Hi — I'm <span class="accent">Your Name</span></h1>
+          <p class="lead">Frontend Developer • UI/UX Enthusiast • Problem Solver</p>
+          <p>
+            I build responsive, accessible websites and web apps. Currently working on
+            projects involving modern CSS, React, and performance-focused front-end architecture.
+          </p>
+          <div class="hero-cta">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn ghost" href="#contact">Get in touch</a>
+          </div>
+        </div>
+        <div class="hero-card">
+          <div class="profile-pic" aria-hidden="true">YN</div>
+          <ul class="hero-stats">
+            <li><strong>5+</strong><span>Years</span></li>
+            <li><strong>20+</strong><span>Projects</span></li>
+            <li><strong>100%</strong><span>Curiosity</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title">Skills</h2>
+        <div class="skills-grid">
+          <div class="skill">HTML &amp; Semantics</div>
+          <div class="skill">CSS &amp; Responsive Design</div>
+          <div class="skill">JavaScript (ES6+)</div>
+          <div class="skill">Accessibility (a11y)</div>
+          <div class="skill">React</div>
+          <div class="skill">Performance</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section alt">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects-grid">
+          <article class="project">
+            <div class="project-thumb">App 1</div>
+            <h3>Project One</h3>
+            <p>Responsive web app built with React. Focus: accessibility and performance.</p>
+            <a class="project-link" href="#" aria-label="Open Project One">View →</a>
+          </article>
+
+          <article class="project">
+            <div class="project-thumb">Site 2</div>
+            <h3>Project Two</h3>
+            <p>Marketing site using modern CSS grid and animation for engaging UX.</p>
+            <a class="project-link" href="#" aria-label="Open Project Two">View →</a>
+          </article>
+
+          <article class="project">
+            <div class="project-thumb">Tool 3</div>
+            <h3>Project Three</h3>
+            <p>Developer tool that automates a common workflow — built as a PWA.</p>
+            <a class="project-link" href="#" aria-label="Open Project Three">View →</a>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER / CONTACT -->
+  <footer id="contact" class="site-footer">
+    <div class="container footer-inner">
+      <div class="contact">
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+        <p>Location: City, Country</p>
+      </div>
+      <div class="social">
+        <h3>Find me</h3>
+        <p><a href="#" aria-label="GitHub">GitHub</a> · <a href="#" aria-label="LinkedIn">LinkedIn</a></p>
+      </div>
+    </div>
+    <div class="copyright">
+      © <span id="year"></span> Your Name — Built with HTML & CSS
+    </div>
+  </footer>
+
+<script>
+  // small script to toggle mobile nav and update year (keeps CSS-only requirement for layout/content)
+  (function () {
+    const toggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('.main-nav');
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      if (!expanded) {
+        nav.style.display = 'flex';
+      } else {
+        nav.style.display = '';
+      }
+    });
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  })();
+</script>
+
+</body>
+</html>

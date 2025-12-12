@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Media Query Practice</title>
+
+<style>
+
+  /* Desktop Styles (default) */
+  body {
+    background: #e3f2fd; /* Light blue for desktop */
+    font-family: Arial, sans-serif;
+  }
+
+  .container {
+    display: flex;          /* Task 1 */
+    gap: 20px;
+    padding: 20px;
+  }
+
+  .left, .right {
+    flex: 1;
+    padding: 20px;
+    background: coral;
+    color: white;
+    font-size: 24px;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  /* Mobile Styles */
+  @media (max-width: 600px) {  /* Task 2 */
+    
+    body {
+      background: #fff3cd; /* Light yellow for mobile */
+    }
+
+    .container {
+      flex-direction: column;  /* Stack vertically */
+    }
+
+    .left, .right {
+      background: teal;   /* Different bg for mobile */
+    }
+  }
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+  <div class="left">Left</div>
+  <div class="right">Right</div>
+</div>
+
+</body>
+</html>

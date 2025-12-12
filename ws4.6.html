@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>CSS Units Practice</title>
+
+<style>
+
+  /* Change base font size to see effect on rem */
+  html {
+    font-size: 10px; /* Try changing this to 16px, 20px, etc. */
+  }
+
+  /* 1. px unit */
+  .px {
+    font-size: 24px;
+    color: darkblue;
+  }
+
+  /* 2. rem unit */
+  .rem {
+    font-size: 2rem; /* Will scale based on html { font-size } */
+    color: darkred;
+  }
+
+  /* 3. %, vh units */
+  .box {
+    width: 50%;        /* Half of screen width */
+    height: 20vh;      /* 20% of viewport height */
+    background: coral;
+    margin-top: 20px;
+  }
+
+</style>
+</head>
+
+<body>
+
+<h1 class="px">Heading 1 (24px)</h1>
+<h1 class="rem">Heading 2 (2rem)</h1>
+
+<div class="box"></div>
+
+</body>
+</html>

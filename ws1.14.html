@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Embedding Media Example</title>
+</head>
+<body>
+
+    <h1>Embedding Media</h1>
+
+    <!-- Image -->
+    <img src="photo.jpg" alt="Sample Image" width="300">
+
+    <br><br>
+
+    <!-- Video -->
+    <video controls width="300">
+        <source src="movie.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <br><br>
+
+    <!-- Audio -->
+    <audio controls>
+        <source src="sound.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <br><br>
+
+    <!-- YouTube Video -->
+    <iframe 
+        width="400" 
+        height="200"
+        src="https://www.youtube.com/embed/xyz123"
+        title="YouTube video"
+        allowfullscreen>
+    </iframe>
+
+</body>
+</html>
